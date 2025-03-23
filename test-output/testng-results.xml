@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="5" total="6" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="5324" started-at="2025-03-23T07:44:11Z" finished-at="2025-03-23T07:44:17Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="5324" started-at="2025-03-23T07:44:11Z" finished-at="2025-03-23T07:44:17Z">
+      <class name="RestAssured.Rest.HttpsCheck">
+        <test-method status="PASS" signature="createmployee()[pri:0, instance:RestAssured.Rest.HttpsCheck@51081592]" name="createmployee" duration-ms="5287" started-at="2025-03-23T13:14:11Z" finished-at="2025-03-23T13:14:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createmployee -->
+      </class> <!-- RestAssured.Rest.HttpsCheck -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
