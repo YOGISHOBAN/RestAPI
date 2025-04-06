@@ -1,0 +1,23 @@
+[
+  {
+    "id": 2,
+    "name": "Johnson",
+    "dob":"17-09-92",
+	"addressDetails":{
+		"houseNumber":"H-57",
+		"aadharNumber":312124,
+		"addressLine1":"Nambiar Road",
+		"addressLine2":"10th Cross-2",
+		"landmark":"Near Wilson Hospital",
+		"pin":2,
+	"officeAddress":{
+		"buildingNumber":5,
+		"addressLine1":"XYZ-2",
+		"addressLine2":"Wilson Road 2th Street",
+		"landmark":"Near Devi Theatre",
+		"EmpID":"EMP-21236",
+		"pin":3318906
+	}
+	}
+  }
+  ]

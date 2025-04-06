@@ -2,11 +2,15 @@ package RestAssured.Rest;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 
+import org.json.simple.JSONObject;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import io.restassured.response.ResponseOptions;
 //import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 
@@ -16,24 +20,24 @@ public class HttpsCheck {
 	public void getAllEmployeeDetails()
 	{
 		Response response=RestAssured.given()
-		.baseUri("https://reqres.in/")
+		.baseUri("http://localhost:3000/")
 		.when()
-		.get("/api/users/1");
+		.get("1");
 		System.out.println(response.asPrettyString());
 	}
 	@Test(enabled=false)
 	public void validategetAllEmployeeDetailsStatusLine()
 	{
 		ValidatableResponse response=RestAssured.given()
-		.baseUri("https://reqres.in/")
+		.baseUri("http://localhost:3000/")
 		.when()
-		.get("/api/users").then();
+		.get("1").then();
 		System.out.println(response.statusCode(200));
 	}
 
 	//POST Request
-	@Test(enabled=true)
-	public void createmployee() throws FileNotFoundException
+	@Test(enabled=false)
+	public void createmployee() throws IOException
 	{
 		FileReader file=new FileReader("createemployee.json");
 		ValidatableResponse response=RestAssured.given()
@@ -41,7 +45,7 @@ public class HttpsCheck {
 		.header("Content-Type","application/json")
 		.body(file)
 		.when()
-		.post("/api/users").then();
+		.post("api/users").then();
 		System.out.println(response.statusCode(201));
 	}
 	
@@ -88,6 +92,19 @@ public class HttpsCheck {
 		System.out.println(response.statusCode(204));
 		
 	}
+	@Test(enabled=false)
+	public void getemployeedetail() throws FileNotFoundException
+	{
+		//FileReader file=new FileReader("EmployeeDetails.json");
+		Response response=RestAssured.given()
+		.baseUri("http://localhost:3000")
+		.when()
+		.get("/1");
+		System.out.println(response.asPrettyString());
+	}
+	
+	
+	
 	
 	
 }

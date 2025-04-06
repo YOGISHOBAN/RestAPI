@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="RestAssured.Rest.HttpsCheck">
+      <class name="RestAssured.Rest.HamcrestMatchersValidation">
         <methods>
-          <include name="createmployee"/>
+          <include name="validateNumericfromJson"/>
         </methods>
-      </class> <!-- RestAssured.Rest.HttpsCheck -->
+      </class> <!-- RestAssured.Rest.HamcrestMatchersValidation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
